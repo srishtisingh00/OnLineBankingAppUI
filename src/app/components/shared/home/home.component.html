@@ -1,0 +1,55 @@
+@if(isLoaded){
+<div class="d-flex justify-content-between mt-3 mb-4">
+  <h4>Welcome {{ userData.customerName }}</h4>
+  <div>
+    <button
+      (click)="editUserDetails()"
+      type="button"
+      class="btn btn-primary btn-sm"
+    >
+      Edit
+    </button>
+  </div>
+</div>
+<div class="row data-labels">
+  <div class="col-md-4 my-2">
+    <label class="control-label d-block">Customer Name:</label>
+    <strong>{{ userData.customerName }}</strong>
+  </div>
+  <div class="col-md-4 my-2">
+    <label class="control-label d-block">Date of Birth:</label>
+    <strong>{{ userData.dateOfBirth }}</strong>
+  </div>
+  <div class="col-md-4 my-2">
+    <label class="control-label d-block">PAN Number:</label>
+    <strong>{{ userData.pan }}</strong>
+  </div>
+  <div class="col-md-4 my-2">
+    <label class="control-label d-block">Email Id:</label>
+    <strong>{{ userData.email }}</strong>
+  </div>
+  <div class="col-md-4 my-2">
+    <label class="control-label d-block">Address:</label>
+    <strong>{{ userData.address }}</strong>
+  </div>
+  <div class="col-md-4 my-2">
+    <label class="control-label d-block">City:</label>
+    <strong>{{ userData.city }}</strong>
+  </div>
+
+  <div class="col-md-4 my-2">
+    <label class="control-label d-block">Password:</label>
+    <strong>{{ userData.password }}</strong>
+  </div>
+
+  <div class="col-md-4 my-2">
+    <label class="control-label d-block">Role Type:</label>
+    <strong>{{ rolesTypeMap[userData.roleTypeId] }}</strong>
+  </div>
+
+  <div class="col-md-4 my-2">
+    <label class="control-label d-block">Gender:</label>
+    <strong>{{ gendersMap[userData.genderId] }}</strong>
+  </div>
+</div>
+}

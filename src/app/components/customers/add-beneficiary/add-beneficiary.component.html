@@ -1,0 +1,102 @@
+<h4 class="mt-3 mb-4">Add Beneficiaries</h4>
+
+<div class="row">
+  <div class="col-md-4">
+    <form [formGroup]="beneForm" (submit)="addNewBeneficiary()">
+      <div class="form-group my-3">
+        <label class="control-label" for="BeneficiaryName"
+          >Beneficiary Name</label
+        >
+        <input
+          formControlName="beneficiaryName"
+          class="form-control"
+          type="text"
+          id="BeneficiaryName"
+          maxlength="50"
+          name="BeneficiaryName"
+        />
+      </div>
+      <div class="form-group my-3">
+        <label class="control-label" for="CustomerID">CustomerID</label>
+        <select
+          formControlName="customerID"
+          class="form-control"
+          data-val="true"
+          data-val-required="The CustomerID field is required."
+          id="CustomerID"
+          name="CustomerID"
+        >
+          <option value="3">Vishu</option>
+        </select>
+      </div>
+      <div class="form-group my-3">
+        <label class="control-label" for="BeneficiaryAccountNumber"
+          >BeneficiaryAccountNumber</label
+        >
+        <input
+          formControlName="beneficiaryAccountNumber"
+          class="form-control"
+          type="text"
+          id="BeneficiaryAccountNumber"
+        />
+      </div>
+      <div class="form-group my-3">
+        <label class="control-label" for="Phone">Phone</label>
+        <input
+          formControlName="phone"
+          class="form-control"
+          type="text"
+          id="Phone"
+          name="Phone"
+          value=""
+        />
+      </div>
+      <div class="form-group my-3">
+        <label class="control-label" for="Email">Email Id</label>
+        <input
+          formControlName="email"
+          class="form-control"
+          type="text"
+          id="Email"
+          name="Email"
+        />
+      </div>
+      <div class="form-group my-3">
+        <label class="control-label" for="BankName">Bank Name</label>
+        <input
+          formControlName="bankName"
+          class="form-control"
+          type="text"
+          id="BankName"
+          maxlength="50"
+          name="BankName"
+        />
+      </div>
+      <div class="form-group my-3">
+        <label class="control-label" for="IFSC">IFSC Code</label>
+        <input
+          formControlName="ifsc"
+          class="form-control"
+          type="text"
+          id="IFSC"
+          maxlength="50"
+          name="IFSC"
+        />
+      </div>
+      <div class="form-group my-3">
+        <label class="control-label" for="Branch">Branch</label>
+        <input
+          formControlName="branch"
+          class="form-control"
+          type="text"
+          id="Branch"
+          maxlength="50"
+          name="Branch"
+        />
+      </div>
+      <div class="form-group my-3">
+        <input type="submit" value="Create" class="btn btn-primary" />
+      </div>
+    </form>
+  </div>
+</div>

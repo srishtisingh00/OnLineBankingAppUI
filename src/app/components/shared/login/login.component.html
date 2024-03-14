@@ -1,0 +1,63 @@
+<div class="card login-card">
+  <div class="card-body row">
+    <div
+      class="col-sm-12 col-md-6 right-border d-flex align-items-center justify-content-center"
+    >
+      <h1 class="sub-head">CK Birla Bank</h1>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <h4>Login</h4>
+
+      <div class="mb-3 mt-3">
+        <label for="roleType" class="form-label">Role Type</label>
+        <select
+          id="roleType"
+          [(ngModel)]="roleType"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option selected disabled>Select Role</option>
+          <option value="1">Manager</option>
+          <option value="2">Customer</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="emailId" class="form-label">Email ID</label>
+        <div class="input-group">
+          <input
+            id="emailId"
+            [(ngModel)]="emailId"
+            type="text"
+            class="form-control"
+            placeholder="Enter Email ID"
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <div class="input-group">
+          <input
+            [(ngModel)]="password"
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Enter Password"
+          />
+        </div>
+      </div>
+      <button
+        (click)="onLoginClick()"
+        type="button"
+        class="btn btn-primary w-100 mt-3"
+      >
+        Login
+      </button>
+      <p class="signup-text">
+        <a href="javascript:void(0)" (click)="signUp()" class="link-primary"
+          >Sign Up</a
+        >
+        to create an account.
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+.right-border {
+    border-right: var(--bs-border-width) solid var(--bs-border-color);
+}
+
+
+.login-card {
+    max-width: 768px;
+    margin: 1rem auto;
+    border: none !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.sub-head {
+    /* font-size: 2rem; */
+    font-weight: 600;
+    margin: 10px 0px;
+    padding: 5px 15px;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.table .table-action-icon div {
+    padding: 5px;
+}

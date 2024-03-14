@@ -1,0 +1,53 @@
+<div class="d-flex justify-content-between mt-3 mb-4">
+  <h4>BeneficiariesDetails</h4>
+  <div>
+    <button
+      (click)="addNewBeneficiary()"
+      type="button"
+      class="btn btn-primary btn-sm mt-3"
+    >
+      <span class="d-inline-block me-2"><i class="bi bi-plus-circle"></i></span
+      ><span>Add New</span>
+    </button>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Beneficiary Name</th>
+      <th>Account Number</th>
+      <th>Phone</th>
+      <th>Email Id</th>
+      <th>Bank Name</th>
+      <th>IFSC Code</th>
+      <th>Branch</th>
+      <th>Customer</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- @for (toast of toastService.toasts; track toast) { -->
+    @for(b of beneficiaries; track b) {
+    <tr>
+      <td>{{ b.beneficiaryName }}</td>
+      <td>{{ b.beneficiaryAccountNumber }}</td>
+      <td>{{ b.phone }}</td>
+      <td>{{ b.email }}</td>
+      <td>{{ b.bankName }}</td>
+      <td>{{ b.ifsc }}</td>
+      <td>{{ b.branch }}</td>
+      <td>{{ b.customer }}</td>
+      <td>
+        <a
+          class="btn btn-danger btn-sm"
+          (click)="
+            deleteBeneficiaryConfirmation(b.beneficiaryID, b.beneficiaryName)
+          "
+          >Delete</a
+        >
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>

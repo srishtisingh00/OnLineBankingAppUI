@@ -1,0 +1,26 @@
+<div class="mb-3 mt-3">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Account Id</th>
+        <!-- <th>Account Type</th> -->
+        <th>Current Balance</th>
+        <th>Date of Opening</th>
+        <!-- <th>Customer</th> -->
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ accountDetails.accountId }}</td>
+        <!-- <td>{{ accountDetails.accountType }}</td> -->
+        <td>{{ accountDetails.balance }}</td>
+        <td>{{ accountDetails.dateOfOpening }}</td>
+        <!-- <td>{{ accountDetails.customer }}</td> -->
+        <td>
+          <a class="btn btn-sm btn-success">Add Amount</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

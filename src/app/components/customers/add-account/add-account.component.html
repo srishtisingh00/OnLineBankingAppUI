@@ -1,0 +1,73 @@
+<h4 class="mb-4 mt-3">Add Account</h4>
+
+@if(isAlreadyAccount) {
+<div class="alert alert-danger" role="alert">
+  Account Number Already Generated : {{ accountId }}
+</div>
+} @else {
+<div class="row">
+  <div class="col-md-4">
+    <form [formGroup]="accountForm" (submit)="addAccount()">
+      <div class="form-group">
+        <label class="control-label" for="CustomerID">CustomerID</label>
+        <select
+          formControlName="customerID"
+          class="form-control"
+          data-val="true"
+          data-val-required="The CustomerID field is required."
+          id="CustomerID"
+          name="CustomerID"
+        >
+          <option [value]="customerData.customerID">
+            {{ customerData.customerName }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="Id">Id</label>
+        <select
+          formControlName="id"
+          class="form-control"
+          data-val="true"
+          data-val-required="The Id field is required."
+          id="Id"
+          name="Id"
+        >
+          <option value="1">Current</option>
+          <option value="2">Savings</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="Balance">Current Balance</label>
+        <input
+          formControlName="balance"
+          class="form-control"
+          type="number"
+          data-val="true"
+          data-val-number="The field Current Balance must be a number."
+          data-val-required="The Current Balance field is required."
+          id="Balance"
+          name="Balance"
+          value=""
+        />
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="DateOfOpening">Date of Opening</label>
+        <input
+          formControlName="dateOfOpening"
+          class="form-control"
+          type="datetime-local"
+          data-val="true"
+          data-val-required="The Date of Opening field is required."
+          id="DateOfOpening"
+          name="DateOfOpening"
+          value=""
+        />
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Add Account" class="btn btn-primary" />
+      </div>
+    </form>
+  </div>
+</div>
+}

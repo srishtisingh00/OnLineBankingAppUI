@@ -1,0 +1,14 @@
+@for (toast of toastService.toasts; track toast) {
+<ngb-toast
+  [class]="getClassName(toast)"
+  [autohide]="true"
+  [delay]="toast.delay || 5000"
+  (hidden)="toastService.remove(toast)"
+>
+  @if(toast.type==="success") {
+  <div>{{ toast.message }}</div>
+  } @else {
+  <div>{{ toast.message }}</div>
+  }
+</ngb-toast>
+}

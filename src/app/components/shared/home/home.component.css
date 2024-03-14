@@ -1,0 +1,10 @@
+.data-labels label {
+    display: inline-block;
+    color: #555555;
+    font-size: 0.875rem;
+}
+
+.data-labels strong {
+    color: #252525;
+    font-weight: 500;
+}
